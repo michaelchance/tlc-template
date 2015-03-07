@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/michaelchance/tlc-template/issues"
   },
-  "homepage": "https://github.com/michaelchance/tlc-template"
+  "homepage": "https://github.com/michaelchance/tlc-template",
+  "dependencies": {
+    "tlc": "0.0.11"
+  }
 }
