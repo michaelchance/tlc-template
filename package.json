@@ -1,0 +1,26 @@
+{
+  "name": "tlc-template",
+  "version": "0.0.10",
+  "description": "A module for rendering templates from memory in tlc",
+  "main": "tlc-template.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michaelchance/tlc-template.git"
+  },
+  "keywords": [
+    "tlc",
+    "template",
+    "jquery",
+    "express",
+    "module"
+  ],
+  "author": "michael chance",
+  "license": "New BSD",
+  "bugs": {
+    "url": "https://github.com/michaelchance/tlc-template/issues"
+  },
+  "homepage": "https://github.com/michaelchance/tlc-template"
+}
