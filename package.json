@@ -1,6 +1,6 @@
 {
   "name": "tlc-template",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "A module for rendering templates from memory in tlc",
   "main": "tlc-template.js",
   "scripts": {
