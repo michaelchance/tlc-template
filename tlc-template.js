@@ -5,7 +5,7 @@ function appendTemplate($tag, $template){
 	
 	}
 
-var TemplateModule = function(tlc){
+function TemplateModule(tlc){
 	var templates = {};
 	
 	this.loadTemplatesFromFile = function(filename){
