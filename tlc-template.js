@@ -17,11 +17,11 @@ var TemplateModule = function(tlc){
 			});
 		}
 	this.loadTemplates = function(htmlString){
-		var $ = cheerio.load(htmlString){
-			$('[id]').each(function(i,e){
-				templates[$(this).attr('id')] = $(this).removeAttr('id');
-				});
-			}
+		var $ = cheerio.load(htmlString);
+		$('[id]').each(function(i,e){
+			templates[$(this).attr('id')] = $(this).removeAttr('id');
+			});
+			
 		}
 		
 	this.tlcModule = {
