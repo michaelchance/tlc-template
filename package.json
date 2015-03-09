@@ -1,6 +1,6 @@
 {
   "name": "tlc-template",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "A module for rendering templates from memory in tlc",
   "main": "tlc-template.js",
   "scripts": {
@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/michaelchance/tlc-template",
   "dependencies": {
-    "tlc": "0.0.11"
+    "tlc": "0.0.15"
   }
 }
