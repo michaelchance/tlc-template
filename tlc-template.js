@@ -11,7 +11,7 @@ function TemplateModule(tlc){
 	this.loadTemplatesFromFile = function(filename){
 		fs.readFile(filename,'utf-8',function(err,result){
 			if(err){
-				console.error(err);
+				// console.error(err);
 				}
 			else if (result){
 				var $ = cheerio.load(result);
@@ -33,18 +33,18 @@ function TemplateModule(tlc){
 	this.tlcModule = {
 		translate : function(context){
 			var data = context.args('data');
-			console.dir(data);
+			// console.dir(data);
 			if(data){
 				var templateid = context.args('templateid');
-				console.dir(templates);
+				// console.dir(templates);
 				var $tag = context.$focus();
 				if(templateid){
 					console.log(templates[templateid]);
 					$tag.append(templates[templateid]);
-					console.log('post append');
-					console.log($tag.html());
+					// console.log('post append');
+					// console.log($tag.html());
 					}
-				console.dir(tlc);
+				// console.dir(tlc);
 				return tlc.run($tag,data);
 				}
 			else{
