@@ -39,7 +39,7 @@ function TemplateModule(tlc){
 				// console.dir(templates);
 				var $tag = context.$focus();
 				if(templateid){
-					console.log(templates[templateid]);
+					//console.log(templates[templateid]);
 					$tag.append(templates[templateid]);
 					// console.log('post append');
 					// console.log($tag.html());
