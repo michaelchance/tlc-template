@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/michaelchance/tlc-template",
   "dependencies": {
-    "cheerio": "^0.18.0",
+    "cheerio": "^0.18.0"
   }
 }
