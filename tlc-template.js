@@ -1,30 +1,13 @@
-var fs = require('fs');
 var cheerio = require('cheerio');
 
 function appendTemplate($tag, $template){
 	
 	}
 
-function TemplateModule(tlc, moduleName){
-	moduleName = moduleName || "template"
+function TemplateModule(){
 	var templates = {};
 	
-	this.loadTemplatesFromFile = function(filename){
-		fs.readFile(filename,'utf-8',function(err,result){
-			if(err){
-				// console.error(err);
-				}
-			else if (result){
-				var $ = cheerio.load(result);
-				$('[id]').each(function(i,e){
-					//console.log($(this).attr('id'));
-					templates[$(this).attr('id')] = $.html($(this).removeAttr('id'));
-					});
-				}
-			});
-		}
 	this.loadTemplates = function(htmlString){
-		
 		var $ = cheerio.load(htmlString);
 		$('[id]').each(function(i,e){
 			templates[$(this).attr('id')] = $.html($(this).removeAttr('id'));
@@ -47,9 +30,10 @@ function TemplateModule(tlc, moduleName){
 					//console.log(templates[templateid]);
 					//$tag.append(templates[templateid]);
 					// console.log('post append');
-					r = tlc.run($tag,data);
+					r = context.tlc.run($tag,data);
 					//console.log(r);
-					context.$focus().append($tag.html());
+					var html = cheerio.html($tag);
+					context.focus(html);
 					}
 				// console.dir(tlc);
 				// var opts = context.opts();
@@ -59,19 +43,8 @@ function TemplateModule(tlc, moduleName){
 			else{
 				return false;
 				}
-			},
-		append : function(context){
-			var templateid = context.args('templateid');
-			if(templateid){
-				var $tag = context.$focus();
-				return $tag.append(templates[templateid].html());
-				}
-			else{
-				return false;
-				}
 			}
 		}
-	tlc.addModule(moduleName,this.tlcModule);
 	//console.log(moduleName);
 	this.templates = function(){
 		return templates;
